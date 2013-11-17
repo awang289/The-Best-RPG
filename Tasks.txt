@@ -17,4 +17,13 @@ Here are the modifications we need to make.
 
 
 
+=======
+1. add more character subclasses
+2. add crt instance variable
+3. add randomness factor to attacks
+4. make monster a superclass and make 3 types of monsters as subclasses (and a fourth for a boss monster)
+5. add a heal method (only characters can heal)
+6. add the option to increase a stat after every fight (I can see this potentially being the hardest as well as the most optional so we might want to leave it for last)
+7. edit yorpg so that it can run with these additions, and edit the printlns so that the text makes sense given the modifications we made
+
 Since I have no freaking clue how to work github and I don't know if we can merge revisions, I suggest we don't play around with that and we just work it normally; eg. one revision at a time. We should declare which tasks we are working on so that we don't have redundancies; we can do that in fb chat or something. To avoid the mess that comes from simultaneous upload, we should also declare in fb chat when we're about to upload a revision so that revisions don't accidentally get overwritten. And then the next person can just add his modifications to the new file. To facilitate this, COMMENT the absolute crap out of the file. All modified methods should have comments because I for one refuse to deal with the nightmare that is accidental overwriting. 
