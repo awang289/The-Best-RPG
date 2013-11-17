@@ -7,9 +7,9 @@ public class Warrior extends Character {
     private String name;
     public Warrior() {
 	HP = 125;
-	str= 100;
+	str= 60;
 	def= 40;
-	att= 0.4;
+	crt= 0.2;
     }
     public Warrior(String n) {
 	this();
@@ -19,11 +19,20 @@ public class Warrior extends Character {
 	return name;
     }
     public void specialize(){
-	att = .8;
+	str = 120;
 	def = 20;
     }
     public void normalize() {
-	att = 0.4;
+	str = 60;
 	def = 40;
+    }
+    public String about() {
+    	String a = "The strong and mighty warrior is strong and mighty. He does impressive amounts of damage";
+    	a = a + ". Too bad he's too stupid to heal very well...";
+    	return a;
+    }
+    public int heal(){
+    	lowerHP(-5);
+    	return 5;
     }
 }
