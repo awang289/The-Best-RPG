@@ -46,5 +46,5 @@ public abstract class Character{
     public abstract int heal();
     public abstract void specialize();
     public abstract void normalize();
-    public abstract void about(); //So I didn't have this for the hw... oops
+    public abstract String about(); //So I didn't have this for the hw... oops
 }
