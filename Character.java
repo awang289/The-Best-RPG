@@ -4,6 +4,7 @@
 //2013-11-15
 
 public abstract class Character{
+    protected String name;
     protected int HP;
     protected int str;
     protected int def;
@@ -11,9 +12,11 @@ public abstract class Character{
     public boolean isAlive(){
 	return (HP > 0);
     }
+    public String getName() { return name; }
     public int getDefense(){
 	return def;
     }
+    public int getHP() { return HP; }
     //Crt accessor method
     public double getCrt() {
         return crt;
@@ -26,7 +29,7 @@ public abstract class Character{
         //incorporated randomness 
         //I changed the attack algorithm from subtraction to division so we don't get so many 0 damages
         //cardy just make sure no monster's defense is above 100
-	int damage = (int) (((Math.random() * .15) + .85) * 10 * str * / m.getDefense());
+	int damage = (int) (((Math.random() * .15) + .85) * 10 * str / m.getDefense());
 	if (damage > 0) {
 	    m.lowerHP(damage);
 	    return damage;
@@ -42,9 +45,9 @@ public abstract class Character{
 	}
 	else { return 0; }
     }
-    //healing method is abstract because requirements are for one additional abstract
+    //healing method is abstract because each character will heal different amounts
     public abstract int heal();
     public abstract void specialize();
     public abstract void normalize();
-    public abstract String about(); //So I didn't have this for the hw... oops
+    public abstract String about();
 }
